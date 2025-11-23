@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Água da Chuva é Vida</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .page {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+        .ods-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .ods-6 { background-color: #26bde2; color: white; }
+        .ods-5 { background-color: #ff3a21; color: white; }
+        .ods-12 { background-color: #bf8b2e; color: white; }
+        .ods-13 { background-color: #3f7e44; color: white; }
+        .diagram-container {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        /* Estilo para itens marcados (risca e reduz opacidade) */
+        .checked-item {
+            text-decoration: line-through;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        /* Estilo para feedback visual temporário ao marcar um item */
+        .check-feedback {
+            background-color: #a7f3d0 !important; /* Verde claro temporário */
+            transition: background-color 0.5s ease;
+        }
+    </style>
+</head>
+<body class="p-4">
+
+    <div class="page">
+        <header class="text-center pb-6 border-b-4 border-blue-500 mb-6">
+            
+            <img src="logo fundação angelica goulart.png" alt="Logo Fundação Angélica Goulart" class="mx-auto h-16 mb-4">
+
+            <img src="capa cartilha.jpg" alt="Capa Cartilha Educativa sobre Aproveitamento de Água" class="mx-auto w-full max-w-sm mb-4 rounded-lg shadow-xl">
+            
+            <h1 class="text-4xl font-extrabold text-blue-700 mb-2">
+                Reúso de Águas Pluviais na Fundação Angélica Goulart
+            </h1>
+            <h2 class="text-xl text-gray-600 italic">
+                Sustentabilidade e Justiça Hídrica
+            </h2>
+            <p class="text-sm text-gray-500 mb-4">
+                Projeto de Extensão em Engenharia Civil: <strong class="font-semibold">Juliana Fernandes Farias</strong>
+            </p>
+
+            <div class="mt-4 flex flex-wrap justify-center gap-2">
+                <span class="ods-badge ods-6">ODS 6 - Água e Saneamento</span>
+                <span class="ods-badge ods-5">ODS 5 - Igualdade de Gênero</span>
+                <span class="ods-badge ods-13">ODS 13 - Ação Climática</span>
+            </div>
+            <p class="mt-4 text-lg text-gray-700">
+                A água da chuva que cai em nossos telhados não é um problema, é uma solução! Nosso projeto é uma ferramenta para garantir a <strong class="font-bold">Segurança Hídrica</strong> e combater antigas desigualdades em nossa comunidade.
+            </p>
+        </header>
+
+        <section class="mb-8 p-6 bg-green-50 rounded-lg shadow-inner">
+            <h3 class="text-2xl font-bold text-green-700 mb-4 border-l-4 border-green-500 pl-3 flex items-center">
+                <span class="text-3xl mr-3">🌍</span> Capítulo 1 – O Ciclo da Água
+            </h3>
+
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                <span class="text-2xl mr-2 text-blue-500">💧</span> O que é o ciclo da água?
+            </h4>
+            <p class="text-gray-700 mb-4">
+                O ciclo da água é o processo natural pelo qual a água circula entre a atmosfera, o solo, os rios, os mares e os seres vivos. Ele garante que a água esteja sempre em movimento e disponível para todos os ecossistemas.
+            </p>
+
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                <span class="text-2xl mr-2 text-blue-500">🔄</span> Etapas do ciclo da água:
+            </h4>
+            <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+                <li><strong class="font-bold">Evaporação:</strong> O calor do sol transforma a água dos rios, lagos e oceanos em vapor.</li>
+                <li><strong class="font-bold">Condensação:</strong> O vapor sobe e se transforma em nuvens.</li>
+                <li><strong class="font-bold">Precipitação:</strong> A água retorna à superfície em forma de chuva, neve ou granizo.</li>
+                <li><strong class="font-bold">Infiltração:</strong> Parte da água penetra no solo e alimenta os lençóis freáticos.</li>
+                <li><strong class="font-bold">Escoamento superficial:</strong> A água que não infiltra escorre para rios e mares, reiniciando o ciclo.</li>
+            </ul>
+
+            <div class="mt-6 text-center">
+                <h4 class="text-lg font-bold text-green-700 mb-3">
+                    Infográfico Ilustrativo: O Ciclo da Água
+                </h4>
+                <img src="ciclo água.jpg" alt="Esquema visual ilustrando as etapas do Ciclo da Água: Evaporação, Condensação, Precipitação, Infiltração e Escoamento." class="mx-auto w-full max-w-sm rounded-lg shadow-lg">
+                <p class="mt-4 p-3 bg-green-100 rounded-md text-gray-700">
+                    <span class="font-bold">💡 Curiosidade:</span> Você sabia que a mesma água que usamos hoje pode ter sido usada por dinossauros há milhões de anos? A água está sempre se renovando!
+                </p>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-green-300">
+                <h4 class="text-lg font-bold text-gray-800 mb-2 flex items-center">
+                    <span class="text-2xl mr-2">✍️</span> Espaço para Anotações
+                </h4>
+                <div class="p-4 bg-white border border-green-400 rounded-lg space-y-2">
+                    <p class="font-medium text-sm text-gray-600">O que você aprendeu sobre o ciclo da água?</p>
+                    <textarea id="note-ciclo-1" class="w-full p-2 border border-gray-300 rounded-md text-sm h-12 resize-none" placeholder="Digite suas anotações aqui..."></textarea>
+                    
+                    <p class="font-medium text-sm text-gray-600">Como podemos proteger esse ciclo na nossa comunidade?</p>
+                    <textarea id="note-ciclo-2" class="w-full p-2 border border-gray-300 rounded-md text-sm h-12 resize-none" placeholder="Digite suas anotações aqui..."></textarea>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-8 p-6 bg-blue-50 rounded-lg shadow-inner">
+            <h3 class="text-2xl font-bold text-blue-700 mb-4 border-l-4 border-blue-500 pl-3 flex items-center">
+                <span class="text-3xl mr-3">🏠</span> Capítulo 2 – O Sistema de Aproveitamento de Águas Pluviais
+            </h3>
+
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                <span class="text-2xl mr-2 text-blue-500">💧</span> Como funciona o sistema?
+            </h4>
+            <p class="text-gray-700 mb-4">
+                O sistema implantado na Fundação Angélica Goulart permite coletar, armazenar e utilizar a água da chuva para fins não potáveis, como limpeza de áreas comuns, irrigação de jardins e descarga sanitária.
+            </p>
+
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                <span class="text-2xl mr-2 text-blue-500">🔧</span> Etapas do sistema:
+            </h4>
+            <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+                <li><strong class="font-bold">Captação:</strong> A água da chuva é coletada pelas calhas instaladas no telhado.</li>
+                <li><strong class="font-bold">Filtragem:</strong> Antes de chegar ao reservatório, a água passa por filtros que removem impurezas.</li>
+                <li><strong class="font-bold">Armazenamento:</strong> A água é armazenada em uma cisterna protegida contra contaminações.</li>
+                <li><strong class="font-bold">Distribuição:</strong> A água pode ser utilizada por meio de torneiras específicas para fins não potáveis.</li>
+            </ul>
+
+            <div class="mt-6 text-center">
+                <h4 class="text-lg font-bold text-blue-700 mb-3">
+                    Esquema Ilustrativo: Captação de Água de Chuva
+                </h4>
+                <img src="esquema reservatório.jpg" alt="Esquema que mostra o telhado de uma casa, as calhas coletando a chuva e a água sendo direcionada para um reservatório (cisterna)." class="mx-auto w-full max-w-sm rounded-lg shadow-lg">
+                <p class="mt-4 p-3 bg-blue-100 rounded-md text-gray-700">
+                    <span class="font-bold">💡 Dica prática:</span> Evite usar a água da cisterna para consumo humano. Ela é ideal para tarefas como lavar o chão, regar plantas e dar descarga.
+                </p>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-blue-300">
+                <h4 class="text-lg font-bold text-gray-800 mb-2 flex items-center">
+                    <span class="text-2xl mr-2">✍️</span> Espaço para Anotações
+                </h4>
+                <div class="p-4 bg-white border border-blue-400 rounded-lg space-y-2">
+                    <p class="font-medium text-sm text-gray-600">Como esse sistema pode ser aplicado na sua casa?</p>
+                    <textarea id="note-reuso-1" class="w-full p-2 border border-gray-300 rounded-md text-sm h-12 resize-none" placeholder="Digite suas anotações aqui..."></textarea>
+                    
+                    <p class="font-medium text-sm text-gray-600">Quais cuidados você acha importantes na manutenção?</p>
+                    <textarea id="note-reuso-2" class="w-full p-2 border border-gray-300 rounded-md text-sm h-12 resize-none" placeholder="Digite suas anotações aqui..."></textarea>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-8 p-6 bg-yellow-50 rounded-lg shadow-inner">
+            <h3 class="text-2xl font-bold text-yellow-700 mb-4 border-l-4 border-yellow-500 pl-3 flex items-center">
+                <span class="text-3xl mr-3">🚿</span> Capítulo 3 – Uso Consciente da Água
+            </h3>
+
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                <span class="text-2xl mr-2 text-blue-500">🌱</span> Por que economizar água?
+            </h4>
+            <p class="text-gray-700 mb-4">
+                A água é um recurso essencial para a vida, mas não é infinita. O uso consciente ajuda a preservar o meio ambiente, reduzir custos e garantir que todos tenham acesso à água de qualidade.
+            </p>
+
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                <span class="text-2xl mr-2 text-blue-500">📋</span> Checklist de hábitos sustentáveis:
+            </h4>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                    <thead>
+                        <tr class="bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                            <th class="px-4 py-2 border-b">Hábito</th>
+                            <th class="px-4 py-2 border-b text-center">Você já faz?</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 text-gray-700">
+                        <tr id="habito-1-row">
+                            <td class="px-4 py-2" data-habit="Fecha a torneira ao escovar os dentes">Fecha a torneira ao escovar os dentes</td>
+                            <td class="px-4 py-2 text-center">
+                                <input type="checkbox" id="habito-1" class="js-checklist" data-habit-id="habito-1">
+                            </td>
+                        </tr>
+                        <tr id="habito-2-row">
+                            <td class="px-4 py-2" data-habit="Reaproveita água para plantas">Reaproveita água para plantas</td>
+                            <td class="px-4 py-2 text-center">
+                                <input type="checkbox" id="habito-2" class="js-checklist" data-habit-id="habito-2">
+                            </td>
+                        </tr>
+                        <tr id="habito-3-row">
+                            <td class="px-4 py-2" data-habit="Usa balde para limpeza">Usa balde para limpeza</td>
+                            <td class="px-4 py-2 text-center">
+                                <input type="checkbox" id="habito-3" class="js-checklist" data-habit-id="habito-3">
+                            </td>
+                        </tr>
+                        <tr id="habito-4-row">
+                            <td class="px-4 py-2" data-habit="Verifica vazamentos">Verifica vazamentos</td>
+                            <td class="px-4 py-2 text-center">
+                                <input type="checkbox" id="habito-4" class="js-checklist" data-habit-id="habito-4">
+                            </td>
+                        </tr>
+                        <tr id="habito-5-row">
+                            <td class="px-4 py-2" data-habit="Usa redutores de vazão">Usa redutores de vazão</td>
+                            <td class="px-4 py-2 text-center">
+                                <input type="checkbox" id="habito-5" class="js-checklist" data-habit-id="habito-5">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="mt-4 p-3 bg-yellow-100 rounded-md text-gray-700">
+                <span class="font-bold">💬 Curiosidade:</span> Uma torneira pingando pode desperdiçar até <strong class="font-bold">46 litros</strong> de água por dia. Imagine isso em um mês!
+            </p>
+
+            <div class="mt-6 pt-4 border-t border-yellow-300">
+                <h4 class="text-lg font-bold text-gray-800 mb-2 flex items-center">
+                    <span class="text-2xl mr-2">✍️</span> Espaço para Anotações
+                </h4>
+                <div class="p-4 bg-white border border-yellow-400 rounded-lg space-y-2">
+                    <p class="font-medium text-sm text-gray-600">Quais dessas práticas você já adota?</p>
+                    <textarea id="note-uso-1" class="w-full p-2 border border-gray-300 rounded-md text-sm h-12 resize-none" placeholder="Digite suas anotações aqui..."></textarea>
+
+                    <p class="font-medium text-sm text-gray-600">Que outras ideias sustentáveis você pode compartilhar com sua comunidade?</p>
+                    <textarea id="note-uso-2" class="w-full p-2 border border-gray-300 rounded-md text-sm h-12 resize-none" placeholder="Digite suas anotações aqui..."></textarea>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-8 p-6 bg-pink-50 rounded-lg shadow-inner">
+            <h3 class="text-2xl font-bold text-pink-700 mb-4 border-l-4 border-pink-500 pl-3 flex items-center">
+                <span class="text-3xl mr-3">🔧</span> Capítulo 4 – Manutenção Básica do Sistema
+            </h3>
+
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                <span class="text-2xl mr-2 text-pink-500">🛠️</span> Por que a manutenção é importante?
+            </h4>
+            <p class="text-gray-700 mb-4">
+                A manutenção garante que o sistema de aproveitamento de águas pluviais funcione corretamente, <strong class="font-semibold">evitando contaminações</strong> e prolongando sua vida útil. É a chave para a segurança e a longevidade do projeto.
+            </p>
+
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                <span class="text-2xl mr-2 text-pink-500">📋</span> Rotina de manutenção:
+            </h4>
+            
+            <div class="p-4 bg-white rounded-lg border border-pink-200">
+                <h5 class="text-center font-bold text-pink-700 mb-4">Infográfico de Manutenção: O que e Quando Fazer</h5>
+                
+                <img src="manutenção.jpg" alt="Checklist de Manutenção Semanal" class="mx-auto w-full max-w-xs mb-4 rounded-lg shadow-md">
+                
+                <div class="flex items-center mb-4 p-3 bg-pink-100 rounded-lg shadow-sm">
+                    <div class="text-center w-20 flex-shrink-0">
+                        <span class="text-3xl" title="Semanal">🗓️</span>
+                        <p class="text-xs font-bold text-pink-800">SEMANAL</p>
+                    </div>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 border-l pl-4 border-pink-400">
+                        <li><label for="manut-1" class="cursor-pointer select-none block">Manter as calhas limpas e desobstruídas. <input type="checkbox" id="manut-1" class="js-checklist-manut hidden" data-manut-id="manut-1"></label></li>
+                        <li><label for="manut-2" class="cursor-pointer select-none block">Verificar vedação do reservatório. <input type="checkbox" id="manut-2" class="js-checklist-manut hidden" data-manut-id="manut-2"></label></li>
+                        <li><label for="manut-3" class="cursor-pointer select-none block">Observar presença de insetos ou odores. <input type="checkbox" id="manut-3" class="js-checklist-manut hidden" data-manut-id="manut-3"></label></li>
+                        <li><label for="manut-4" class="cursor-pointer select-none block">Realizar a purga do <em class="font-semibold">first flush</em> e conferir nível da água. <input type="checkbox" id="manut-4" class="js-checklist-manut hidden" data-manut-id="manut-4"></label></li>
+                    </ul>
+                </div>
+
+                <div class="flex items-center p-3 bg-pink-100 rounded-lg shadow-sm">
+                    <div class="text-center w-20 flex-shrink-0">
+                        <span class="text-3xl" title="Mensal">📅</span>
+                        <p class="text-xs font-bold text-pink-800">MENSAL</p>
+                    </div>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 border-l pl-4 border-pink-400">
+                        <li><label for="manut-5" class="cursor-pointer select-none block">Limpeza dos filtros. <input type="checkbox" id="manut-5" class="js-checklist-manut hidden" data-manut-id="manut-5"></label></li>
+                        <li><label for="manut-6" class="cursor-pointer select-none block">Inspeção de vetores (mosquitos, insetos). <input type="checkbox" id="manut-6" class="js-checklist-manut hidden" data-manut-id="manut-6"></label></li>
+                    </ul>
+                </div>
+
+                <div class="mt-6 p-4 border border-blue-400 rounded-lg bg-blue-50">
+                    <h6 class="font-bold text-blue-700 mb-2 flex items-center">
+                        <span class="mr-2 text-2xl">🔬</span> Monitoramento de Parâmetros (Qualidade da Água)
+                    </h6>
+                    <ul class="list-disc list-inside text-gray-700 ml-4 text-sm space-y-1">
+                        <li><strong class="font-bold">Cloro residual:</strong> 0,5–2,0 mg/L.</li>
+                        <li><strong class="font-bold">Turbidez:</strong> ≤100 UNT.</li>
+                        <li><strong class="font-bold">pH:</strong> 6,0–9,0.</li>
+                    </ul>
+                </div>
+
+                <div class="mt-4 p-3 bg-gray-100 rounded-lg">
+                    <h6 class="font-bold text-gray-700 mb-1 flex items-center">
+                        <span class="mr-2 text-2xl">📝</span> Registro Comunitário (Caderno de Bordo)
+                    </h6>
+                    <p class="text-xs italic text-gray-600 mb-2">Use o campo de anotação abaixo para registrar a atividade da semana.</p>
+                </div>
+            </div>
+            <p class="mt-4 p-3 bg-pink-100 rounded-md text-gray-700">
+                <span class="font-bold">💡 Dica prática:</span> Manter registros organizados ajuda a identificar problemas rapidamente e fortalece a autonomia da comunidade na gestão do sistema.
+            </p>
+
+            <div class="mt-6 pt-4 border-t border-pink-300">
+                <h4 class="text-lg font-bold text-gray-800 mb-2 flex items-center">
+                    <span class="text-2xl mr-2">✍️</span> Espaço para Anotações
+                </h4>
+                <div class="p-4 bg-white border border-pink-400 rounded-lg space-y-2">
+                    <p class="font-medium text-sm text-gray-600">Quais cuidados você já pratica na manutenção do sistema?</p>
+                    <textarea id="note-manut-1" class="w-full p-2 border border-gray-300 rounded-md text-sm h-12 resize-none" placeholder="Digite suas anotações aqui..."></textarea>
+                    
+                    <p class="font-medium text-sm text-gray-600">Que melhorias poderiam ser feitas para facilitar essa rotina?</p>
+                    <textarea id="note-manut-2" class="w-full p-2 border border-gray-300 rounded-md text-sm h-12 resize-none" placeholder="Digite suas anotações aqui..."></textarea>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-8 p-6 bg-gray-100 rounded-lg shadow-inner">
+            <h3 class="text-2xl font-bold text-blue-800 mb-4 border-l-4 border-blue-600 pl-3 flex items-center">
+                <span class="text-3xl mr-3">⚖️</span> Capítulo 4.5 – Justiça Hídrica e Resiliência Climática
+            </h3>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-4 bg-red-50 rounded-lg shadow-sm">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                        <span class="text-3xl mr-2 text-red-600">🛑</span> Combate ao Racismo Ambiental
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                        Comunidades de baixa renda são as que mais sofrem com a falta de infraestrutura e com a incerteza no fornecimento de água.
+                    </p>
+                    <p class="mt-2 text-sm font-medium text-red-700">
+                        O projeto oferece controle e uma fonte de água gratuita, desafiando essa lógica e sendo uma forma de <strong class="font-bold">Reparação Socioambiental</strong>.
+                    </p>
+                </div>
+
+                <div class="p-4 bg-green-50 rounded-lg shadow-sm">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                        <span class="text-3xl mr-2 text-green-600">🌧️</span> Resiliência Climática
+                        <span class="ods-badge ods-13 ml-2">ODS 13</span>
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                        O reservatório de <strong class="font-bold">5.000 L</strong> tem uma dupla proteção: retém parte da água da enchente e cria uma reserva estratégica contra a seca.
+                    </p>
+                    <p class="mt-2 text-sm font-medium text-green-700">
+                        Isso nos torna mais fortes e preparados para os eventos extremos causados pelas mudanças climáticas.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-gray-300">
+                <h4 class="text-lg font-bold text-blue-700 mb-2">
+                    Visualização do Sistema
+                </h4>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="diagram-container">
+                        <h5 class="font-semibold text-base text-blue-700 mb-2">Diagrama do SCAP (Captação e Reúso)</h5>
+                        <img src="esquema reservatório - planta.png" alt="Diagrama simplificado do Sistema de Captação e Aproveitamento Pluvial SCAP" class="w-full h-auto rounded-md shadow-inner">
+                        <p class="text-xs text-gray-500 mt-2">Planta baixa e corte simplificados: o sistema usa um reservatório de 5.000 L, calhas e filtro automático.</p>
+                    </div>
+                    <div class="diagram-container">
+                        <h5 class="font-semibold text-base text-blue-700 mb-2">Reservatório Instalado (5.000 L)</h5>
+                        <img src="reservatório.jpg" alt="Reservatório de 5000 litros instalado na Fundação" class="w-full h-auto rounded-md shadow-inner">
+                        <p class="text-xs text-gray-500 mt-2">O coração do projeto: o reservatório garante nossa autonomia hídrica por até <strong class="font-semibold">~12</strong> dias sem chuva.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-8 p-6 bg-purple-50 rounded-lg shadow-inner">
+            <h3 class="text-2xl font-bold text-purple-700 mb-4 border-l-4 border-purple-500 pl-3 flex items-center">
+                <span class="text-3xl mr-3">🤝</span> Capítulo 5 – Impacto Social e Comunitário
+            </h3>
+
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                <span class="text-2xl mr-2 text-purple-500">🌍</span> Transformação na comunidade
+            </h4>
+            <p class="text-gray-700 mb-4">
+                O sistema de aproveitamento de águas pluviais não é apenas uma solução técnica: ele fortalece laços comunitários e promove práticas sustentáveis que podem ser replicadas em outras casas da Fundação Angélica Goulart, criando uma cultura de <strong class="font-bold">autonomia e cooperação</strong>.
+            </p>
+
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                <span class="text-2xl mr-2 text-purple-500">📈</span> Benefícios sociais
+            </h4>
+            <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4 mb-4">
+                <li>Redução de custos com água potável, liberando recursos para outras necessidades da comunidade.</li>
+                <li>Melhoria da qualidade de vida e da segurança hídrica.</li>
+                <li>Formação de agentes ambientais locais.</li>
+                <li>Disseminação de práticas sustentáveis para além da Fundação.</li>
+            </ul>
+
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                <span class="text-2xl mr-2 text-purple-500">💬</span> Depoimentos da Comunidade
+            </h4>
+            <div class="grid md:grid-cols-2 gap-4 mt-2">
+                <div class="p-3 bg-purple-100 border-l-4 border-purple-400 rounded-lg italic text-gray-700">
+                    <p>“Aprendi que posso cuidar da água da minha casa e ensinar outras pessoas.”</p>
+                </div>
+                <div class="p-3 bg-purple-100 border-l-4 border-purple-400 rounded-lg italic text-gray-700">
+                    <p>“Agora sei que a tecnologia também é para nós, mulheres da comunidade.”</p>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-purple-300">
+                <h4 class="text-lg font-bold text-gray-800 mb-2 flex items-center">
+                    <span class="text-2xl mr-2">✍️</span> Espaço para Anotações
+                </h4>
+                <div class="p-4 bg-white border border-purple-400 rounded-lg space-y-2">
+                    <p class="font-medium text-sm text-gray-600">Como esse projeto impactou sua vida?</p>
+                    <textarea id="note-social-1" class="w-full p-2 border border-gray-300 rounded-md text-sm h-12 resize-none" placeholder="Digite suas anotações aqui..."></textarea>
+                    
+                    <p class="font-medium text-sm text-gray-600">Que outras ações sustentáveis você gostaria de ver na comunidade?</p>
+                    <textarea id="note-social-2" class="w-full p-2 border border-gray-300 rounded-md text-sm h-12 resize-none" placeholder="Digite suas anotações aqui..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8 p-6 bg-red-50 border-l-4 border-red-500 rounded-lg">
+            <h3 class="text-2xl font-bold text-red-600 mb-4 flex items-center">
+                <span class="text-3xl mr-3">👩‍🔧</span> Capítulo 6 – Gênero e Tecnologia: Quebrando Estereótipos
+                <span class="ods-badge ods-5 ml-4">ODS 5</span>
+            </h3>
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                <span class="text-2xl mr-2 text-red-500">👩‍👩‍👧</span> Empoderamento das Mulheres
+            </h4>
+            <p class="text-gray-700 mb-3">
+                A crise hídrica tem um rosto de gênero. Ao eliminar a necessidade de buscar e gerenciar água para limpeza, o projeto traz <strong class="font-bold">Equidade de Gênero</strong> para nossa comunidade.
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+                <li>O sistema reduz a carga de trabalho, liberando tempo valioso para descanso, estudo ou geração de renda.</li>
+                <li>A <strong class="font-bold">capacitação técnica</strong> (uso de bomba, filtros, clorador) foi focada em mulheres, promovendo seu <strong class="font-bold">empoderamento</strong> como agentes de transformação tecnológica na gestão do sistema.</li>
+                <li>Quebramos estereótipos: a Engenharia Civil e a gestão da água também são áreas de atuação feminina!</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3 class="text-2xl font-bold text-blue-600 mb-4 border-l-4 border-blue-400 pl-3">
+                <span class="text-3xl mr-3">♻️</span> Capítulo 7 – Economia Circular e Autonomia
+                <span class="ods-badge ods-12 ml-4">ODS 12</span>
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-4 bg-blue-50 rounded-lg">
+                    <h4 class="font-semibold text-lg text-blue-700">Substituição Eficiente</h4>
+                    <p class="text-gray-700 text-sm">
+                        Substituímos até <strong class="font-bold">9.000 L/mês</strong> de água potável por água de reúso. Isso representa <strong class="font-bold">100%</strong> da demanda para usos não potáveis.
+                    </p>
+                </div>
+                <div class="p-4 bg-blue-50 rounded-lg">
+                    <h4 class="font-semibold text-lg text-blue-700">Destino da Água de Reúso</h4>
+                    <ul class="list-disc list-inside text-gray-700 text-sm ml-2">
+                        <li>Descargas Sanitárias.</li>
+                        <li>Irrigação de Hortas/Jardins.</li>
+                        <li>Limpeza de Pátios e Áreas Comuns.</li>
+                    </ul>
+                </div>
+                <div class="p-4 bg-blue-50 rounded-lg">
+                    <h4 class="font-semibold text-lg text-blue-700">Vantagens Comunitárias</h4>
+                    <ul class="list-disc list-inside text-gray-700 text-sm ml-2">
+                        <li><strong class="font-bold">Economia Financeira</strong> (o investimento de R$ 28.000 será pago em apenas <strong class="font-semibold">~8,4</strong> meses!).</li>
+                        <li><strong class="font-bold">Autonomia Hídrica</strong> (reserva de <strong class="font-semibold">5.000 L</strong>).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-6 p-4 text-center bg-blue-100 rounded-lg">
+                <p class="text-xl font-bold text-blue-800">
+                    Lembre-se: A água do reservatório é para <strong class="font-bold">USOS NÃO POTÁVEIS</strong>!
+                </p>
+                <p class="text-sm text-blue-700 mt-1">
+                    Para saber como operar e monitorar o sistema, consulte o <strong class="font-bold">Manual de Operação e Manutenção</strong>.
+                </p>
+            </div>
+        </section>
+
+        <footer class="mt-8 pt-4 border-t border-gray-300 text-center text-sm text-gray-600">
+            <p class="font-semibold mb-1">Seja um Multiplicador Ambiental Comunitário!</p>
+            <p>Juntos, construímos um futuro mais justo e sustentável. <span class="text-blue-500 font-bold">#ReusoFAZ</span></p>
+            
+            <button id="reset-button" class="mt-4 px-4 py-2 bg-red-500 text-white font-bold rounded-lg shadow hover:bg-red-600 transition duration-300 ease-in-out text-xs">
+                🔴 Limpar Meu Progresso (Anotações e Checklists)
+            </button>
+            
+            <div class="mt-3 text-xs border-t pt-2 border-gray-200">
+                <p class="text-gray-500">
+                    Fundação Angélica Goulart - Rua Belchior da Fonseca, 1025 – Pedra de Guaratiba – Rio de Janeiro – RJ
+                </p>
+                <p class="text-gray-500">
+                    Tel: (21) 2417.1252 | Site: <a href="http://www.fundacaoangelicagoulart.org.br" target="_blank" class="text-blue-500 hover:underline">www.fundacaoangelicagoulart.org.br</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Função principal para carregar o estado salvo (checklists e anotações)
+        function loadSavedState() {
+            // 1. Carregar Checklists (Capítulo 3)
+            document.querySelectorAll('.js-checklist').forEach(checkbox => {
+                const id = checkbox.dataset.habitId;
+                const row = document.getElementById(id + '-row');
+                const textCell = row ? row.querySelector('td:first-child') : null;
+
+                const savedState = localStorage.getItem('checklist_' + id);
+                if (savedState === 'checked') {
+                    checkbox.checked = true;
+                    if (textCell) textCell.classList.add('checked-item');
+                }
+            });
+
+            // 2. Carregar Checklists de Manutenção (Capítulo 4)
+            document.querySelectorAll('.js-checklist-manut').forEach(checkbox => {
+                const id = checkbox.dataset.manutId;
+                const savedState = localStorage.getItem('manut_' + id);
+                const label = checkbox.closest('label');
+
+                if (savedState === 'checked') {
+                    checkbox.checked = true;
+                    if (label) label.classList.add('checked-item');
+                }
+            });
+
+            // 3. Carregar Anotações
+            document.querySelectorAll('textarea[id^="note-"]').forEach(textarea => {
+                const id = textarea.id;
+                const savedText = localStorage.getItem('note_' + id);
+                if (savedText) {
+                    textarea.value = savedText;
+                }
+            });
+        }
+
+        // Função principal para salvar o estado E aplicar animação
+        function saveState(event) {
+            // Identificar se o evento veio de um checkbox
+            const isCheckbox = event && event.target && (event.target.classList.contains('js-checklist') || event.target.classList.contains('js-checklist-manut'));
+
+            // 1. Salvar Checklists (Capítulo 3 e 4)
+            document.querySelectorAll('.js-checklist, .js-checklist-manut').forEach(checkbox => {
+                const isHabit = checkbox.classList.contains('js-checklist');
+                const id = isHabit ? checkbox.dataset.habitId : checkbox.dataset.manutId;
+                const storageKey = isHabit ? 'checklist_' + id : 'manut_' + id;
+                
+                // Elemento que deve ter a classe riscada (texto)
+                const textElement = isHabit 
+                    ? document.getElementById(id + '-row').querySelector('td:first-child')
+                    : checkbox.closest('label');
+                
+                // Elemento para o feedback visual (toda a linha ou o bloco de texto)
+                const feedbackElement = isHabit 
+                    ? document.getElementById(id + '-row') 
+                    : checkbox.closest('div.flex.items-center');
+
+                if (checkbox.checked) {
+                    localStorage.setItem(storageKey, 'checked');
+                    if (textElement) textElement.classList.add('checked-item');
+                    
+                    // Adicionar feedback visual temporário se foi o elemento clicado
+                    if (isCheckbox && event.target === checkbox) {
+                        if (feedbackElement) {
+                            feedbackElement.classList.add('check-feedback');
+                            setTimeout(() => {
+                                feedbackElement.classList.remove('check-feedback');
+                            }, 500); // Remove o destaque após 0.5 segundos
+                        }
+                    }
+                } else {
+                    localStorage.removeItem(storageKey);
+                    if (textElement) textElement.classList.remove('checked-item');
+                    if (feedbackElement) feedbackElement.classList.remove('check-feedback');
+                }
+            });
+
+            // 2. Salvar Anotações
+            document.querySelectorAll('textarea[id^="note-"]').forEach(textarea => {
+                const id = textarea.id;
+                if (textarea.value.trim() !== "") {
+                    localStorage.setItem('note_' + id, textarea.value.trim());
+                } else {
+                    localStorage.removeItem('note_' + id);
+                }
+            });
+        }
+
+        // Função para redefinir o progresso
+        function resetProgress() {
+            if (confirm("Tem certeza que deseja apagar TODO o seu progresso (anotações e checklists)? Esta ação é irreversível.")) {
+                localStorage.clear(); // Apaga todos os dados salvos
+                window.location.reload(); // Recarrega a página para refletir o estado limpo
+            }
+        }
+
+        // 3. Inicialização e Listeners
+        window.addEventListener('load', () => {
+            loadSavedState(); // Carrega o estado ao abrir a página
+
+            // Adiciona listener para salvar o estado ao clicar em qualquer checkbox
+            document.querySelectorAll('.js-checklist, .js-checklist-manut').forEach(checkbox => {
+                checkbox.addEventListener('change', saveState);
+            });
+            
+            // Adiciona listener para salvar anotações quando o usuário sai do campo
+            document.querySelectorAll('textarea[id^="note-"]').forEach(textarea => {
+                textarea.addEventListener('blur', saveState); 
+            });
+
+            // Listener para o botão de reset
+            const resetButton = document.getElementById('reset-button');
+            if (resetButton) {
+                resetButton.addEventListener('click', resetProgress);
+            }
+        });
+
+    </script>
+
+</body>
+</html>
